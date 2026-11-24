@@ -1,0 +1,12 @@
+.logo {
+ border: none;
+}
+
+/*Pour les grands écrans, passage du container header en grid pour alignement vertical du logo et du titre avec les présentations des photographes*/
+@media (min-width: 64.375em) {
+   .logo {
+    grid-column: 1;
+    justify-self: flex-start;
+}
+}
+ 

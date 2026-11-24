@@ -1,0 +1,54 @@
+.photographers-list {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+margin: auto;
+gap: 2em;
+}
+
+/*Colonnes adaptables à la largeur de l'écran*/
+@media (max-width: 56rem) {
+  .photographers-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 40rem) {
+  .photographers-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.photographer {
+text-align: center;   
+}
+
+.photo {
+    width: 12.5em;
+    height: 12.5em;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.name {
+font-size: 2.25em;
+font-weight: 400;
+color: #D3573C; 
+}
+
+.city, .country {
+font-size: 0.813em;
+}
+
+.tagline {
+font-size: 0.625em;
+color: black;
+}
+
+.price {
+font-size: 0.563em;
+color: #757575;
+}
+
+

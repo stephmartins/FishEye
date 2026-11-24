@@ -1,5 +1,10 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+const dmSans = DM_Sans({
+  variable: "--dm-sans",
+  subsets: ["latin"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

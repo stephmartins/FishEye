@@ -6,6 +6,8 @@ const nextConfig = {
   },
   cacheComponents: true,
   partialPrefetching: true,
+  
+  /*Règle supprimée pour résoudre un problème de fichier .css qui ne s'appliquent pas :
   turbopack: {
     rules: {
       "*.css": {
@@ -14,6 +16,8 @@ const nextConfig = {
       },
     },
   },
+*/
+
 };
 
 export default nextConfig;

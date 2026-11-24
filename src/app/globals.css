@@ -24,3 +24,66 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+  justify-content:space-between;
+  align-items: center;
+  font-family: var(--dm-sans), sans-serif; 
+  font-size: 1.2em;
+}
+
+/*Pour les grands écrans, passage du container header en grid pour alignement vertical du logo et du titre avec les présentations des photographes*/
+@media (min-width: 64.375em) {
+  header {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: auto;
+  gap: 2em;
+  }
+}
+
+/*Pour les petits écrans, centrer le logo et le titre lorsqu'ils passent sur 2 lignes*/
+@media (max-width: 53.313em) {
+  header {
+  justify-content: center;
+  }
+}
+
+header h1 {
+  font-weight: 400;
+  justify-items: flex-end;
+ }
+
+/*Pour les grands écrans, passage du container header en grid pour alignement vertical du logo et du titre avec les présentations des photographes*/
+@media (min-width: 60em) {
+   header h1 {
+    grid-column: span 2;
+    justify-self: self-end;
+}
+}
+
+ /*Pour tablettes (2 colonnes), afficher le logo et le titre sur 2 lignes*/
+ @media (min-width: 46.875em) and (max-width: 56.25em) {
+  header h1 {
+   flex-basis: 100%;
+  }
+}
+
+
+/*Rectification du centrage pour les grands écrans*/
+@media (min-width: 81.25em) {
+   header h1 {
+    margin-right: 2.5em;
+}
+}
+
+main{
+  margin: 1em auto;
+  width: 70%;
+  height: auto;
+  color: #901c1c;
+  text-align: center;
+}
