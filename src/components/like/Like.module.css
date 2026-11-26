@@ -1,0 +1,17 @@
+.like {
+    display: flex;
+    align-items: center;
+}
+
+.count {
+    align-items: center;
+}
+
+.like-icon {
+    border: none;
+}
+
+.like-button {
+    border: none;
+    background: transparent;
+}

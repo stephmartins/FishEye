@@ -6,11 +6,12 @@ margin: 2em;
 display: grid;
 grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 2fr); /*3 colonnes dont la centrale plus étroite*/
 margin: auto;
+margin-bottom: 2em;
 gap: 2em;
-max-height: 19.563em;
 justify-items: center;
 align-items: center;
 background-color: #fafafa;
+padding-block: 2em;
 }
 
 .banner-colonne1 {
@@ -59,11 +60,14 @@ grid-row: 3;
 .bouton-contact {
 color:#FFFFFF;
 background-color: #901C1C;
-border-radius: 0.3em;
+border-radius: 0.313em;
 border: none;
 width: 8.5em;
 height: 3.4504em;
-font-weight: 700;
-font-size: 1.3em;
+font-weight: 500;
+font-size: 1.313em;
 }
 
+.media-list{
+  justify-content: center;
+}

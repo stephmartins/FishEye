@@ -1,6 +1,7 @@
 import {prisma} from "@/app/prisma-db.js";
 import Logo from "@/components/logo/Logo";
 import styles from "./page.module.css";
+import MediasList from "@/components/medias-list/MediasList"
 
 export default async function PhotographerPage({params}) {
 
@@ -8,8 +9,12 @@ export default async function PhotographerPage({params}) {
     const photographers = await prisma.photographer.findMany();
 
     const photographer = photographers.find(
-    (id) => id.name.toLowerCase().replaceAll(" ", "-") === slug
+    (photographer) => photographer.name.toLowerCase().replaceAll(" ", "-") === slug
     );
+
+    const medias = await prisma.media.findMany({
+        where: { photographerId: photographer.id },
+    }); /*Récupérer les médias pour mise à jour de l'affichage avec utilisation du dropdown*/
      
     return(
 
@@ -34,10 +39,19 @@ export default async function PhotographerPage({params}) {
             alt={`Portrait de ${photographer.name}`}>
         </img>
 
-</section>
-<div className={styles.filtres}>
-    trier par 
-</div>
+    </section>
+
+
+    <section className={styles["media-list"]}>
+
+        <MediasList photographer={photographer} medias={medias}/> {/*Props transmises à MediasList*/}
+
+    </section>
+
+    <section className={styles["like-price"]}>
+
+    </section>    
+
 </main>
 )
 }

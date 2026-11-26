@@ -1,0 +1,57 @@
+.medias-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: center;
+    margin-top: 2em;
+    gap: 2em;
+}
+.media-card {
+display: flex;
+flex-direction: column;
+}
+
+.media {
+    justify-items: center;
+    width: 100%;
+    height: 18.75em;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.media-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.media-title {
+font-size: 1em;
+font-weight: 400;
+}
+
+.price-like {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 0.2em;
+position : fixed;
+right: 8em;
+bottom: 0;
+background-color: #db8876;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+font-size: 1.5em;
+font-weight: 500;
+color: #000000;
+padding: 0.7em 1.2em;
+margin: 0;
+text-align: center;
+}
+
+.like-icon {
+  display: block;
+  padding: 0;
+  padding-right: 2em;
+  }
