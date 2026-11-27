@@ -1,0 +1,104 @@
+
+.bouton-contact {
+color:#FFFFFF;
+background-color: #901C1C;
+border-radius: 0.313em;
+border: none;
+width: 8.5em;
+height: 3.4504em;
+font-weight: 500;
+font-size: 1.313em;
+cursor: pointer; /*main blanche survol souris*/
+}
+
+.bouton-contact:hover,
+.bouton-contact:focus {
+  background: #db8876;
+  color: #000000; 
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  background: #db8876;
+  padding: 2em;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: -5px 10px 30px 0 rgba(0, 0, 0, 0.25);
+}
+
+.close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  border: none;
+  background: none;
+  font-size: 30px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: black;
+  text-align: left;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.modal input,
+.modal textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+
+.contactez-moi {
+    display: block;
+    font-size: 2.5em;
+    color: black;
+    text-align: left;
+}
+
+.photographer-name {
+    font-size: 2.5em;
+    padding-bottom: 1em;
+    color: black;
+    text-align: left;
+}
+
+.modal label {
+  color: #312e2e;
+  font-size: 1.5em;
+}
+
+.envoyer {
+color:#FFFFFF;
+background-color: #901C1C;
+border-radius: 0.313em;
+border: none;
+width: 8.5em;
+height: 3.4504em;
+font-weight: 500;
+font-size: 1.313em;
+cursor: pointer; /*main blanche survol souris*/
+justify-content: left;   
+}
+

@@ -2,8 +2,19 @@ import {prisma} from "@/app/prisma-db.js";
 import Logo from "@/components/logo/Logo";
 import styles from "./page.module.css";
 import MediasList from "@/components/medias-list/MediasList"
+import ContactModal from "@/components/contact-modal/ContactModal";
+import { Suspense } from "react"; 
 
-export default async function PhotographerPage({params}) {
+/*Ajouté pour résoudre une erreur*/
+export default function PhotographerPage({ params }) {
+  return (
+    <Suspense fallback={<p>Chargement du photographe...</p>}>
+      <PhotographerContent params={params} />
+    </Suspense>
+  );
+}
+
+async function PhotographerContent({params}) {
 
     const { slug } = await params;
     const photographers = await prisma.photographer.findMany();
@@ -32,7 +43,9 @@ export default async function PhotographerPage({params}) {
                     
             <p className={styles.tagline}>{photographer.tagline}</p>
        </div>
-        <button className={styles["bouton-contact"]}>Contactez-moi</button>
+        
+       <ContactModal photographer={photographer}/>
+
        <img
             className={styles.photo}
             src={`/images/assets/${photographer.portrait}`}

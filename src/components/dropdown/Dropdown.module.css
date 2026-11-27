@@ -36,12 +36,12 @@
   width: 10.625em;
   display: flex;
   align-items: center;
-  }
+    }
 
 .dropdown-button-open {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-}
+  }
 
 .fleche {
   margin-left: auto;
@@ -67,6 +67,7 @@
   border-bottom-right-radius: 0.313em;
   box-sizing: border-box;
   z-index: 10;/*Position par rapport aux autres éléments de la page*/
+  box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .dropdown-list li {
